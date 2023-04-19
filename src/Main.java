@@ -6,7 +6,7 @@ public class Main {
     	dealership.initialize();
     	System.out.println(dealership.vehicles);
 
-        
+
         TextProcessor.introduction();
         // Main logic loop.
         do {
@@ -14,7 +14,7 @@ public class Main {
             TextProcessor.getInput();
             TextProcessor.processInput();
         } 
-        while (true); // Closes the program when the user inputs "exit".
+        while (!TextProcessor.input.equals("exit")); // Closes the program when the user inputs "exit".
     	
     }
 }

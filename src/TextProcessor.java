@@ -84,8 +84,8 @@ public class TextProcessor {
         scanner.close();
     }
     private static void processInvalidInput() {
-        System.out.println("Sorry, that input is invalid. Please try again...");
         System.out.println("");
+        System.out.println("Sorry, that input is invalid. Please try again...");
     }
 
 }
