@@ -6,7 +6,7 @@ public class Main {
     	dealership.initialize();
     	System.out.println(dealership.vehicles);
 
-
+        
         TextProcessor.introduction();
         // Main logic loop.
         do {

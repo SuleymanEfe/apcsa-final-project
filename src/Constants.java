@@ -3,28 +3,34 @@ public class Constants {
 	public static final int SUV_ID = 0;
 	public static final int SUV_MIN_NUMBER_OF_SEATS = 4;
 	public static final int SUV_MAX_NUMBER_OF_SEATS = 8;
-	public static final int MAX_SPEED = 200;
+	public static final int SUB_MIN_SPEED = 150;
+	public static final int SUB_MAX_SPEED = 200;
 	
 	public static final int MOTORCYCLE_ID = 1;
 	public static final int MOTORCYCLE_MIN_NUMBER_OF_SEATS = 1;
 	public static final int MOTORCYCLE_MAX_NUMBER_OF_SEATS = 2;
-	public static final int MOTORCYCLE_SPEED = 350;
+	public static final int MOTORCYCLE_MIN_SPEED = 250;
+	public static final int MOTORCYCLE_MAX_SPEED = 350;
 	
 	public static final int TRUCK_ID = 2;
 	public static final int TRUCK_MIN_NUMBER_OF_SEATS = 2;
 	public static final int TRUCK_MAX_NUMBER_OF_SEATS = 4;
-	public static final int TRUCK_SPEED = 150;
+	public static final int TRUCK_MIN_SPEED = 100;
+	public static final int TRUCK_MAX_SPEED = 150;
 
 	
 	public static final int SEDAN_ID = 3;
 	public static final int SEDAN_MIN_NUMBER_OF_SEATS = 4;
 	public static final int SEDAN_MAX_NUMBER_OF_SEATS = 5;
-	public static final int SEDAN_SPEED = 250;
+	public static final int SEDAN_MIN_SPEED = 250;
+	public static final int SEDAN_MAX_SPEED = 300;
 	
 	public static final int SPORTS_ID = 4;
 	public static final int SPORTS_MIN_NUMBER_OF_SEATS = 1;
 	public static final int SPORTS_MAX_NUMBER_OF_SEATS = 4;
-	public static final int SPORT_SPEED = 500;
+	public static final int SPORT_MIN_SPEED = 300;
+	public static final int SPORT_MAX_SPEED = 500;
+
 	
 	public static final String[] COLORS = new String[] {"White", "Black", "Gray", "Silver", "Green", "Yellow", "Bronze"};
 	
