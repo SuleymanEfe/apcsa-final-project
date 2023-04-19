@@ -14,7 +14,7 @@ public class Main {
             TextProcessor.getInput();
             TextProcessor.processInput();
         } 
-        while (TextProcessor.input != "exit"); // Closes the program when the user inputs "exit".
+        while (true); // Closes the program when the user inputs "exit".
     	
     }
 }
