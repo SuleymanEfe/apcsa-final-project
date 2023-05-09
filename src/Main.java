@@ -4,7 +4,7 @@ public class Main {
     {
     	Dealership dealership = new Dealership();
     	dealership.initialize();
-    	System.out.println(dealership.vehicles);
+    	//System.out.println(dealership.allVehicles);
 
 
         TextProcessor.introduction();

@@ -104,6 +104,45 @@ public class Dealership {
 		printVehicles(inPriceRange);
     }
     
+    //vehicles in speed range
+    public void searchBySpeedRange(int minSpeed, int maxSpeed) {
+    	ArrayList<Vehicle> inSpeedRange = new ArrayList<Vehicle>();
+    	
+    	for(Vehicle v: currVehicles) {
+			if(v.getSpeed() >= minSpeed && v.getSpeed() <= maxSpeed) {
+				inSpeedRange.add(v);
+			}
+		}
+		
+		printVehicles(inSpeedRange);
+    }
+    
+    //vehicles in year range
+    public void searchByYearRange(int minYear, int maxYear) {
+    	ArrayList<Vehicle> inYearRange = new ArrayList<Vehicle>();
+    	
+    	for(Vehicle v: currVehicles) {
+			if(v.getYear() >= minYear && v.getYear() <= maxYear) {
+				inYearRange.add(v);
+			}
+		}
+		
+		printVehicles(inYearRange);
+    }
+    
+    //vehicles in mileage range
+    public void searchByMileageRange(int minMileage, int maxMileage) {
+    	ArrayList<Vehicle> inMileageRange = new ArrayList<Vehicle>();
+    	
+    	for(Vehicle v: currVehicles) {
+			if(v.getMileage() >= minMileage && v.getMileage() <= maxMileage) {
+				inMileageRange.add(v);
+			}
+		}
+		
+		printVehicles(inMileageRange);
+    }
+    
     //lowest to highest price
     public void sortByPrice() {
     	ArrayList<Vehicle> sortedByPrice = new ArrayList<Vehicle>();
@@ -120,14 +159,14 @@ public class Dealership {
     	printVehicles(sortedByPrice);
     }
     
-    //highest to lowest speed
+    //highest to lowest speed 
     public void sortBySpeed() {
     	ArrayList<Vehicle> sortedBySpeed = new ArrayList<Vehicle>();
     	
     	Collections.sort(currVehicles, new Comparator<Vehicle>() {
             @Override
             public int compare(Vehicle v1, Vehicle v2) {
-                return Integer.compare(v1.getSpeed(), v2.getSpeed());
+                return Integer.compare(v2.getSpeed(), v1.getSpeed());
             }
         });
     	
@@ -135,7 +174,40 @@ public class Dealership {
     	
     	printVehicles(sortedBySpeed);
     }
-
+    
+    //newest to oldest year 
+    public void sortByYear() {
+    	ArrayList<Vehicle> sortedByYear = new ArrayList<Vehicle>();
+    	
+    	Collections.sort(currVehicles, new Comparator<Vehicle>() {
+            @Override
+            public int compare(Vehicle v1, Vehicle v2) {
+                return Integer.compare(v2.getYear(), v1.getYear());
+            }
+        });
+    	
+    	sortedByYear = currVehicles;
+    	
+    	printVehicles(sortedByYear);
+    }
+    
+    //least to greatest mileage
+    public void sortByMileage() {
+    	ArrayList<Vehicle> sortedByMileage = new ArrayList<Vehicle>();
+    	
+    	Collections.sort(currVehicles, new Comparator<Vehicle>() {
+            @Override
+            public int compare(Vehicle v1, Vehicle v2) {
+                return Integer.compare(v1.getMileage(), v2.getMileage());
+            }
+        });
+    	
+    	sortedByMileage = currVehicles;
+    	
+    	printVehicles(sortedByMileage);
+    }
+    
+    //display vehicles
     public void printVehicles(ArrayList<Vehicle> veh) {
     	for(Vehicle v: veh) {
     		v.toString();
