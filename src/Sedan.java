@@ -1,6 +1,6 @@
 public class Sedan extends Vehicle{
-    public Sedan(String color, int price, int numberOfSeats, int speed) {
-        super(color, price, numberOfSeats, speed);
+    public Sedan(int id, String color, int price, int numberOfSeats, int speed, int year, int mileage) {
+        super(id, color, price, numberOfSeats, speed, year, mileage);
 		
 	}
 }

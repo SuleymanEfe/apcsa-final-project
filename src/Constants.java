@@ -3,8 +3,8 @@ public class Constants {
 	public static final int SUV_ID = 0;
 	public static final int SUV_MIN_NUMBER_OF_SEATS = 4;
 	public static final int SUV_MAX_NUMBER_OF_SEATS = 8;
-	public static final int SUB_MIN_SPEED = 150;
-	public static final int SUB_MAX_SPEED = 200;
+	public static final int SUV_MIN_SPEED = 150;
+	public static final int SUV_MAX_SPEED = 200;
 	
 	public static final int MOTORCYCLE_ID = 1;
 	public static final int MOTORCYCLE_MIN_NUMBER_OF_SEATS = 1;
@@ -28,18 +28,19 @@ public class Constants {
 	public static final int SPORTS_ID = 4;
 	public static final int SPORTS_MIN_NUMBER_OF_SEATS = 1;
 	public static final int SPORTS_MAX_NUMBER_OF_SEATS = 4;
-	public static final int SPORT_MIN_SPEED = 300;
-	public static final int SPORT_MAX_SPEED = 500;
+	public static final int SPORTS_MIN_SPEED = 300;
+	public static final int SPORTS_MAX_SPEED = 500;
 
 	
 	public static final String[] COLORS = new String[] {"White", "Black", "Gray", "Silver", "Green", "Yellow", "Bronze"};
-	
+ 			
 	public static final int MIN_PRICE = 100000;
 	public static final int MAX_PRICE = 1000000;
 	
+	public static final int MIN_YEAR = 2000;
+	public static final int MAX_YEAR = 2023;
 	
-	public static final int MAX_AGE = 100;
-	
+	public static final int MIN_MILEAGE = 0;
 	public static final int MAX_MILEAGE = 10000000;
 	
 	
