@@ -6,7 +6,7 @@ public class Dealership {
     
     public void initialize() {
         for(int i = 0; i < 20; i++){
-            int randomType = getRandomNumber(1, 4); // This defined the type of the vehicle. 4 is sport cars which is also the last ID. SEE: Constants.java
+            int randomType = getRandomNumber(1, 4); // This defines the type of the vehicle. 4 is sport cars which is also the last ID. SEE: Constants.java
 
             String randomColor = getRandomColor();
             int randomPrice = getRandomNumber(Constants.MIN_PRICE, Constants.MAX_PRICE);
