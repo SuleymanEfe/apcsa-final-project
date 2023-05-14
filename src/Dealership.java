@@ -19,26 +19,31 @@ public class Dealership {
 
             switch(randomType){
                 case 0:
+                    // SUV
                     randomSpeed = getRandom(Constants.SUV_MIN_SPEED, Constants.SUV_MAX_SPEED);
                     randomNumOfSeats = getRandom(Constants.SUV_MIN_NUMBER_OF_SEATS, Constants.SUV_MAX_NUMBER_OF_SEATS);
                     vehicle = new SUV(Constants.SUV_ID, randomColor, randomPrice, randomNumOfSeats, randomSpeed, randomYear, randomMileage);
                     break;
                 case 1:
+                    // MOTORCYCLE
                     randomSpeed = getRandom(Constants.MOTORCYCLE_MIN_SPEED, Constants.MOTORCYCLE_MAX_SPEED);
                     randomNumOfSeats = getRandom(Constants.MOTORCYCLE_MIN_NUMBER_OF_SEATS, Constants.MOTORCYCLE_MAX_NUMBER_OF_SEATS);
                     vehicle = new Motorcycle(Constants.MOTORCYCLE_ID, randomColor, randomPrice, randomNumOfSeats, randomSpeed, randomYear, randomMileage);
                     break;
                 case 2:
+                    // TRUCK
                     randomSpeed = getRandom(Constants.TRUCK_MIN_SPEED, Constants.TRUCK_MAX_SPEED);
                     randomNumOfSeats = getRandom(Constants.TRUCK_MIN_NUMBER_OF_SEATS, Constants.TRUCK_MAX_NUMBER_OF_SEATS);
                     vehicle = new Truck(Constants.TRUCK_ID, randomColor, randomPrice, randomNumOfSeats, randomSpeed, randomYear, randomMileage);
                     break;
                 case 3:
+                    // SEDAN
                     randomSpeed = getRandom(Constants.SEDAN_MIN_SPEED, Constants.SEDAN_MAX_SPEED);
                     randomNumOfSeats = getRandom(Constants.SEDAN_MIN_NUMBER_OF_SEATS, Constants.SEDAN_MAX_NUMBER_OF_SEATS);
                     vehicle = new Sedan(Constants.SEDAN_ID, randomColor, randomPrice, randomNumOfSeats, randomSpeed, randomYear, randomMileage);
                     break;
                 case 4:
+                    // SPORT
                     randomSpeed = getRandom(Constants.SPORTS_MIN_SPEED, Constants.SPORTS_MAX_SPEED);
                     randomNumOfSeats = getRandom(Constants.SPORTS_MIN_NUMBER_OF_SEATS, Constants.SPORTS_MAX_NUMBER_OF_SEATS);
                     vehicle = new SportsCar(Constants.SPORTS_ID, randomColor, randomPrice, randomNumOfSeats, randomSpeed, randomYear, randomMileage);
@@ -46,7 +51,6 @@ public class Dealership {
             }
 
             allVehicles.add(vehicle);
-
         }
     }
       
