@@ -46,5 +46,31 @@ public class Vehicle {
 		return mileage; 
 	}
 	
-	//public String toString(){}
+	public String toString(){
+		String vehicleType = "";
+
+		switch(id){
+			case 0:
+				// SUV
+				vehicleType = "SUV";
+				break;
+			case 1:
+				// MOTORCYCLE
+				vehicleType = "Motorcycle";
+				break;
+			case 2:
+				// TRUCK
+				vehicleType = "Truck";
+				break;
+			case 3:
+				// SEDAN
+				vehicleType = "Sedan";
+				break;
+			case 4:
+				
+				break;
+		}
+		
+		return year + " " + color + " " + vehicleType;
+	}
 }
