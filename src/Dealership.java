@@ -6,12 +6,12 @@ public class Dealership {
     
     public void initialize() {
         for(int i = 0; i < 20; i++){
-            int randomType = getRandom(1, 4); // This defined the type of the vehicle. 4 is sport cars which is also the last ID. SEE: Constants.java
+            int randomType = getRandomNumber(1, 4); // This defined the type of the vehicle. 4 is sport cars which is also the last ID. SEE: Constants.java
 
             String randomColor = getRandomColor();
-            int randomPrice = getRandom(Constants.MIN_PRICE, Constants.MAX_PRICE);
-            int randomYear = getRandom(Constants.MIN_YEAR, Constants.MAX_YEAR);
-            int randomMileage = getRandom(Constants.MIN_MILEAGE, Constants.MAX_MILEAGE);
+            int randomPrice = getRandomNumber(Constants.MIN_PRICE, Constants.MAX_PRICE);
+            int randomYear = getRandomNumber(Constants.MIN_YEAR, Constants.MAX_YEAR);
+            int randomMileage = getRandomNumber(Constants.MIN_MILEAGE, Constants.MAX_MILEAGE);
             int randomSpeed = 0;
             int randomNumOfSeats = 0;
 
@@ -20,32 +20,32 @@ public class Dealership {
             switch(randomType){
                 case 0:
                     // SUV
-                    randomSpeed = getRandom(Constants.SUV_MIN_SPEED, Constants.SUV_MAX_SPEED);
-                    randomNumOfSeats = getRandom(Constants.SUV_MIN_NUMBER_OF_SEATS, Constants.SUV_MAX_NUMBER_OF_SEATS);
+                    randomSpeed = getRandomNumber(Constants.SUV_MIN_SPEED, Constants.SUV_MAX_SPEED);
+                    randomNumOfSeats = getRandomNumber(Constants.SUV_MIN_NUMBER_OF_SEATS, Constants.SUV_MAX_NUMBER_OF_SEATS);
                     vehicle = new SUV(Constants.SUV_ID, randomColor, randomPrice, randomNumOfSeats, randomSpeed, randomYear, randomMileage);
                     break;
                 case 1:
                     // MOTORCYCLE
-                    randomSpeed = getRandom(Constants.MOTORCYCLE_MIN_SPEED, Constants.MOTORCYCLE_MAX_SPEED);
-                    randomNumOfSeats = getRandom(Constants.MOTORCYCLE_MIN_NUMBER_OF_SEATS, Constants.MOTORCYCLE_MAX_NUMBER_OF_SEATS);
+                    randomSpeed = getRandomNumber(Constants.MOTORCYCLE_MIN_SPEED, Constants.MOTORCYCLE_MAX_SPEED);
+                    randomNumOfSeats = getRandomNumber(Constants.MOTORCYCLE_MIN_NUMBER_OF_SEATS, Constants.MOTORCYCLE_MAX_NUMBER_OF_SEATS);
                     vehicle = new Motorcycle(Constants.MOTORCYCLE_ID, randomColor, randomPrice, randomNumOfSeats, randomSpeed, randomYear, randomMileage);
                     break;
                 case 2:
                     // TRUCK
-                    randomSpeed = getRandom(Constants.TRUCK_MIN_SPEED, Constants.TRUCK_MAX_SPEED);
-                    randomNumOfSeats = getRandom(Constants.TRUCK_MIN_NUMBER_OF_SEATS, Constants.TRUCK_MAX_NUMBER_OF_SEATS);
+                    randomSpeed = getRandomNumber(Constants.TRUCK_MIN_SPEED, Constants.TRUCK_MAX_SPEED);
+                    randomNumOfSeats = getRandomNumber(Constants.TRUCK_MIN_NUMBER_OF_SEATS, Constants.TRUCK_MAX_NUMBER_OF_SEATS);
                     vehicle = new Truck(Constants.TRUCK_ID, randomColor, randomPrice, randomNumOfSeats, randomSpeed, randomYear, randomMileage);
                     break;
                 case 3:
                     // SEDAN
-                    randomSpeed = getRandom(Constants.SEDAN_MIN_SPEED, Constants.SEDAN_MAX_SPEED);
-                    randomNumOfSeats = getRandom(Constants.SEDAN_MIN_NUMBER_OF_SEATS, Constants.SEDAN_MAX_NUMBER_OF_SEATS);
+                    randomSpeed = getRandomNumber(Constants.SEDAN_MIN_SPEED, Constants.SEDAN_MAX_SPEED);
+                    randomNumOfSeats = getRandomNumber(Constants.SEDAN_MIN_NUMBER_OF_SEATS, Constants.SEDAN_MAX_NUMBER_OF_SEATS);
                     vehicle = new Sedan(Constants.SEDAN_ID, randomColor, randomPrice, randomNumOfSeats, randomSpeed, randomYear, randomMileage);
                     break;
                 case 4:
                     // SPORT
-                    randomSpeed = getRandom(Constants.SPORTS_MIN_SPEED, Constants.SPORTS_MAX_SPEED);
-                    randomNumOfSeats = getRandom(Constants.SPORTS_MIN_NUMBER_OF_SEATS, Constants.SPORTS_MAX_NUMBER_OF_SEATS);
+                    randomSpeed = getRandomNumber(Constants.SPORTS_MIN_SPEED, Constants.SPORTS_MAX_SPEED);
+                    randomNumOfSeats = getRandomNumber(Constants.SPORTS_MIN_NUMBER_OF_SEATS, Constants.SPORTS_MAX_NUMBER_OF_SEATS);
                     vehicle = new SportsCar(Constants.SPORTS_ID, randomColor, randomPrice, randomNumOfSeats, randomSpeed, randomYear, randomMileage);
                     break;
             }
@@ -62,7 +62,7 @@ public class Dealership {
     }
     
     
-    public int getRandom(int min, int max) {
+    public int getRandomNumber(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
 
     }
