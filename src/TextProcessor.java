@@ -74,19 +74,19 @@ public class TextProcessor {
 
 
     private static void processViewCars() {
-        System.out.println("How do you want to view the available cars?");
+        System.out.println("How do you want to view the available vehicles?");
         System.out.println("Please enter one of the following commands:");
-        System.out.println("    - \"all\" :              view all cars currently available at the dealership.");
-        System.out.println("    - \"type\" :             search for cars of a specific type (Sedan, Truck, etc.).");
-        System.out.println("    - \"color\" :            search for cars of a specific color.");
-        System.out.println("    - \"price range\" :      search for cars within a specific price range.");
-        System.out.println("    - \"speed range\" :      search for cars within a specific speed range.");
-        System.out.println("    - \"year range\" :       search for cars within a specific year range.");
-        System.out.println("    - \"mileage range\" :    search for cars within a specific mileage range.");
-        System.out.println("    - \"sort by price\" :    view all cars sorted by price (lowest to highest).");
-        System.out.println("    - \"sort by speed\" :    view all cars sorted by speed (highest to lowest).");
-        System.out.println("    - \"sort by year\" :     view all cars sorted by year (newest to oldest)");
-        System.out.println("    - \"sort by mileage\" :  view all cars sorted by mileage (lowest to highest).");
+        System.out.println("    - \"all\" :              view all vehicles currently available at the dealership.");
+        System.out.println("    - \"type\" :             search for vehicles of a specific type (Sedan, Truck, etc.).");
+        System.out.println("    - \"color\" :            search for vehicles of a specific color.");
+        System.out.println("    - \"price range\" :      search for vehicles within a specific price range.");
+        System.out.println("    - \"speed range\" :      search for vehicles within a specific speed range.");
+        System.out.println("    - \"year range\" :       search for vehicles within a specific year range.");
+        System.out.println("    - \"mileage range\" :    search for vehicles within a specific mileage range.");
+        System.out.println("    - \"sort by price\" :    view all vehicles sorted by price (lowest to highest).");
+        System.out.println("    - \"sort by speed\" :    view all vehicles sorted by speed (highest to lowest).");
+        System.out.println("    - \"sort by year\" :     view all vehicles sorted by year (newest to oldest)");
+        System.out.println("    - \"sort by mileage\" :  view all vehicles sorted by mileage (lowest to highest).");
         processInputViewCars();
     }
     private static void processInputViewCars() {
@@ -110,6 +110,7 @@ public class TextProcessor {
                 break;
             }
             case ("color"): {
+                System.out.println("(Please remember to select a type before searching for more attributes.)");
                 System.out.println("Please enter one of the following colors:");
                 System.out.println("    - \"white\"");
                 System.out.println("    - \"black\"");
@@ -125,6 +126,7 @@ public class TextProcessor {
 
             // search for a range
             case ("price range"): {
+                System.out.println("(Please remember to select a type before searching for more attributes.)");
                 System.out.println("Please enter a minimum price:");
                 getInput();
                 int minPrice = Integer.valueOf(input);
@@ -135,6 +137,7 @@ public class TextProcessor {
                 break;
             }
             case ("speed range"): {
+                System.out.println("(Please remember to select a type before searching for more attributes.)");
                 System.out.println("Please enter a minimum speed:");
                 getInput();
                 int minSpeed = Integer.valueOf(input);
@@ -145,6 +148,7 @@ public class TextProcessor {
                 break;
             }
             case ("year range"): {
+                System.out.println("(Please remember to select a type before searching for more attributes.)");
                 System.out.println("Please enter a minimum year:");
                 getInput();
                 int minYear = Integer.valueOf(input);
@@ -155,6 +159,7 @@ public class TextProcessor {
                 break;
             }
             case ("mileage range"): {
+                System.out.println("(Please remember to select a type before searching for more attributes.)");
                 System.out.println("Please enter a minimum mileage:");
                 getInput();
                 int minMileage = Integer.valueOf(input);
@@ -167,18 +172,22 @@ public class TextProcessor {
 
             // sort by parameter
             case ("sort by price"): {
+                System.out.println("(Please remember to select a type before searching for more attributes.)");
                 dealership.sortByPrice();
                 break;
             }
             case ("sort by speed"): {
+                System.out.println("(Please remember to select a type before searching for more attributes.)");
                 dealership.sortBySpeed();
                 break;
             }
             case ("sort by year"): {
+                System.out.println("(Please remember to select a type before searching for more attributes.)");
                 dealership.sortByYear();
                 break;
             }
             case ("sort by mileage"): {
+                System.out.println("(Please remember to select a type before searching for more attributes.)");
                 dealership.sortByMileage();
                 break;
             }

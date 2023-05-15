@@ -72,7 +72,7 @@ public class Dealership {
     	ArrayList<Vehicle> typeOnly = new ArrayList<Vehicle>();
     	
 		for(Vehicle v: allVehicles) {
-			if(v.getID() == type) {
+			if(v.getType() == type) {
 				typeOnly.add(v);
 			}
 		}
