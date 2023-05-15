@@ -1,8 +1,8 @@
 import javax.xml.validation.Validator;
 
 public class Truck extends Vehicle {
-    public Truck(int id, String color, int price, int numberOfSeats, int speed, int year, int mileage) {
-        super(id, color, price, numberOfSeats, speed, year, mileage);
+    public Truck(int id, int type, String color, int price, int numberOfSeats, int speed, int year, int mileage) {
+        super(id, type, color, price, numberOfSeats, speed, year, mileage);
 		
 	}
 }

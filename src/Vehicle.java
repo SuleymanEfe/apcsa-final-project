@@ -1,6 +1,7 @@
 
 public class Vehicle {
 	private int id;
+	private int type;
 	private String color;
 	private int price;
 	private int numberOfSeats;
@@ -8,8 +9,9 @@ public class Vehicle {
 	private int year;
 	private int mileage;
 	
-	public Vehicle(int id, String color, int price, int numberOfSeats, int speed, int year, int mileage) {
+	public Vehicle(int id, int type, String color, int price, int numberOfSeats, int speed, int year, int mileage) {
 		this.id = id;
+		this.type = type;
 		this.color = color;
 		this.price = price;
 		this.numberOfSeats = numberOfSeats;
@@ -20,6 +22,10 @@ public class Vehicle {
 	
 	public int getID() {
 		return id;
+	}
+	
+	public int getType() {
+		return type;
 	}
 	
 	public String getColor() {
@@ -49,7 +55,7 @@ public class Vehicle {
 	public String toString(){
 		String vehicleType = "";
 
-		switch(id){
+		switch(type){
 			case 0:
 				// SUV
 				vehicleType = "SUV";
@@ -72,6 +78,6 @@ public class Vehicle {
 				break;
 		}
 		
-		return year + " " + color + " " + vehicleType;
+		return "Vehicle #" + id + ": \n\tType: " + vehicleType+ "\n\tYear: " + year + "\n\tColor: " + color + "\n\tPrice: $" + price + "\n\tNumber of seats: " + numberOfSeats + "\n\tSpeed: " + speed + " mph\n\tMileage: " + mileage + " miles";
 	}
 }
