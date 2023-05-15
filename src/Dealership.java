@@ -6,7 +6,7 @@ public class Dealership {
     
     public void initialize() {
         for(int i = 0; i < 20; i++){
-            int randomType = getRandomNumber(1, 4); // This defines the type of the vehicle. 4 is sport cars which is also the last ID. SEE: Constants.java
+            int randomType = getRandomNumber(0, 4); // This defines the type of the vehicle. 4 is sport cars which is also the last ID. SEE: Constants.java
 
             String randomColor = getRandomColor();
             int randomPrice = getRandomNumber(Constants.MIN_PRICE, Constants.MAX_PRICE);
@@ -63,7 +63,7 @@ public class Dealership {
     
     
     public int getRandomNumber(int min, int max) {
-        return (int) ((Math.random() * (max - min)) + min);
+        return (int) ((Math.random() * (max - min + 1)) + min);
 
     }
     
@@ -87,7 +87,7 @@ public class Dealership {
     	ArrayList<Vehicle> colorOnly = new ArrayList<Vehicle>();
     	
     	for(Vehicle v: currVehicles) {
-			if(v.getColor().equals(color)) {
+			if(v.getColor().toLowerCase().trim().equals(color)) {
 				colorOnly.add(v);
 			}
 		}
@@ -214,7 +214,7 @@ public class Dealership {
     //display vehicles
     public void printVehicles(ArrayList<Vehicle> veh) {
     	for(Vehicle v: veh) {
-    		v.toString();
+    		System.out.println(v.toString());
     	}
     }
 }

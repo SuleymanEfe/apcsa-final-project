@@ -67,7 +67,8 @@ public class Vehicle {
 				vehicleType = "Sedan";
 				break;
 			case 4:
-				
+				// SPORTS CAR
+				vehicleType = "Sports Car";
 				break;
 		}
 		

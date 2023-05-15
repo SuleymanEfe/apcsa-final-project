@@ -7,7 +7,7 @@ public class Main {
     	//System.out.println(dealership.allVehicles);
 
 
-        TextProcessor.introduction();
+        TextProcessor.introduction(dealership);
         // Main logic loop.
         do {
             TextProcessor.prompt();
