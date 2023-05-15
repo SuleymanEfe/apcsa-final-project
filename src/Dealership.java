@@ -217,4 +217,13 @@ public class Dealership {
     		System.out.println(v.toString());
     	}
     }
+    
+    //purchase vehicle 
+    public void purchaseVehicle(int id) {
+    	for(int i = 0; i < allVehicles.size(); i++) {
+    		if(allVehicles.get(i).getID() == id) {
+    			allVehicles.remove(i);
+    		}
+    	}
+    }
 }
