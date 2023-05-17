@@ -41,7 +41,7 @@ public class Constants {
 	public static final int MAX_YEAR = 2023;
 	
 	public static final int MIN_MILEAGE = 0;
-	public static final int MAX_MILEAGE = 10000000;
+	public static final int MAX_MILEAGE = 10000;
 	
 	
 

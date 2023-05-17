@@ -72,14 +72,19 @@ public class Dealership {
     	ArrayList<Vehicle> typeOnly = new ArrayList<Vehicle>();
     	
 		for(Vehicle v: allVehicles) {
-			if(v.getID() == type) {
+			if(v.getType() == type) {
 				typeOnly.add(v);
 			}
 		}
 		
 		currVehicles = typeOnly;
 		
-		printVehicles(currVehicles);
+		if(typeOnly.size() == 0) {
+			System.out.println("Sorry, there are no vehicles of the type you are looking for currently in our dealership.");
+		}
+		else {			
+			printVehicles(currVehicles);
+		}
     }
     
     //vehicles with specific color
@@ -92,7 +97,12 @@ public class Dealership {
 			}
 		}
 		
-		printVehicles(colorOnly);
+    	if(colorOnly.size() == 0) {
+    		System.out.println("Sorry, there are no vehicles of the type with the color you are looking for currently in our dealership.");
+    	}
+    	else {
+    		printVehicles(colorOnly);
+    	}
     }
     
     //vehicles in price range
@@ -105,7 +115,12 @@ public class Dealership {
 			}
 		}
 		
-		printVehicles(inPriceRange);
+    	if(inPriceRange.size() == 0) {
+    		System.out.println("Sorry, there are no vehicles of the type with the price you are looking for currently in our dealership.");
+    	}
+    	else {
+    		printVehicles(inPriceRange);
+    	}
     }
     
     //vehicles in speed range
@@ -117,8 +132,13 @@ public class Dealership {
 				inSpeedRange.add(v);
 			}
 		}
-		
-		printVehicles(inSpeedRange);
+    	
+    	if(inSpeedRange.size() == 0) {
+    		System.out.println("Sorry, there are no vehicles of the type with the speed you are looking for currently in our dealership.");
+    	}
+    	else {
+    		printVehicles(inSpeedRange);
+    	}
     }
     
     //vehicles in year range
@@ -131,7 +151,12 @@ public class Dealership {
 			}
 		}
 		
-		printVehicles(inYearRange);
+    	if(inYearRange.size() == 0) {
+    		System.out.println("Sorry, there are no vehicles of the type with the year you are looking for currently in our dealership.");
+    	}
+    	else {
+    		printVehicles(inYearRange);
+    	}
     }
     
     //vehicles in mileage range
@@ -144,7 +169,12 @@ public class Dealership {
 			}
 		}
 		
-		printVehicles(inMileageRange);
+    	if(inMileageRange.size() == 0) {
+    		System.out.println("Sorry, there are no vehicles of the type with the mileage you are looking for currently in our dealership.");
+    	}
+    	else {
+    		printVehicles(inMileageRange);
+    	}
     }
     
     //lowest to highest price
@@ -219,11 +249,13 @@ public class Dealership {
     }
     
     //purchase vehicle 
-    public void purchaseVehicle(int id) {
+    public boolean purchaseVehicle(int id) {
     	for(int i = 0; i < allVehicles.size(); i++) {
     		if(allVehicles.get(i).getID() == id) {
     			allVehicles.remove(i);
+    			return true;
     		}
     	}
+    	return false;
     }
 }
