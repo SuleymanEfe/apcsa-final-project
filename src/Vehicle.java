@@ -81,4 +81,4 @@ public class Vehicle {
 		return "Vehicle #" + id + ": \n\tType: " + vehicleType+ "\n\tYear: " + year + "\n\tColor: " + color + "\n\tPrice: $" + price + "\n\tNumber of seats: " + numberOfSeats + "\n\tSpeed: " + speed + " mph\n\tMileage: " + mileage + " miles";
 	}
 }
- 
+  
